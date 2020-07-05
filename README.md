@@ -36,6 +36,8 @@ Használata:
 sudo i2cdetect -y 1
 ```
 
+Működő példakód: [lcd.py](./test/lcd.py)
+
 ## Ultrahangos távolságmérő használata
 
 ## Folyadék-áramlásmérő használata
