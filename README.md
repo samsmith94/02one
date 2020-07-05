@@ -40,6 +40,12 @@ Működő példakód: [lcd.py](./test/lcd.py)
 
 ## Ultrahangos távolságmérő használata
 
+Működő példakód: [ultrasonic_sensor.py](./test/ultrasonic_sensor.py)
+
 ## Folyadék-áramlásmérő használata
 
+Működő példakód: [flowmeter.py](./test/flowmeter.py)
+
 ## Hőmérő használata
+
+Működő példakód: [thermometer.py](./test/thermometer.py)
