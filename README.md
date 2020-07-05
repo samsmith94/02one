@@ -1,13 +1,13 @@
 # 02one
 
-## Biztonságos fájl-átvitel Raspberry-re:
+## Biztonságos fájl-átvitel Windows-ról Raspberry-re:
 ### SCP kliens letöltése
 Le kell tölteni a `pscp.exe` fájlt [innen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 A letöltött .exe helyét vagy fel kell fűzni a `PATH`-ra, vagy pedig az .exe fájl könyvtárából kiadni a parancsokat
 
 ### Fájl átvitele
 `pspc -pw yourpassword filename pi@raspberrypi:/home/pi/filename`
-ahol `yourpassword' a jelszó (raspberry alapértelmezetten)
+ahol `yourpassword` a jelszó (raspberry alapértelmezetten)
 
 Tehát example.py átvitele:
 `pspc -pw raspberry test.py pi@raspberrypi:/home/pi/test.py`
@@ -23,6 +23,8 @@ Szükség van még a python-smbus2 telepítésére is az I2C használata miatt: 
 Végül érdemes lehet telepíteni az i2c-tools-t is, hogy leellenőrizhessük a buszra csatlakozó eszközök címét.
 Telepítése: `sudo apt-get install -y i2c-tools`
 Használata: `sudo i2cdetect -y 1`
+
+## Ultrahangos távolságmérő használata
 
 ## Folyadék-áramlásmérő használata
 
