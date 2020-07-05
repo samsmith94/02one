@@ -1,20 +1,32 @@
 # 02one
 
 ## Biztonságos fájl-átvitel Windows-ról Raspberry-re:
-### SCP kliens letöltése
+#### SCP kliens letöltése
 Le kell tölteni a `pscp.exe` fájlt [innen](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 A letöltött .exe helyét vagy fel kell fűzni a `PATH`-ra, vagy pedig az .exe fájl könyvtárából kiadni a parancsokat.
 
-### Fájl átvitele
+#### Fájl átvitele
 `pspc -pw yourpassword filename pi@raspberrypi:/home/pi/filename`
 ahol `yourpassword` a jelszó (alapértelmezetten raspberry)
 
 Tehát pl. test.py átvitele:
 `pspc -pw raspberry test.py pi@raspberrypi:/home/pi/test.py`.
 
-### Könyvtár átvitele
+#### Könyvtár átvitele
 A `-r` kapcsolót kell használni:
 `pscp -pw raspberry -r folder\* pi@raspberrypi:/home/pi/`.
+
+## Ultrahangos távolságmérő használata
+
+`Működő példakód: [ultrasonic_sensor.py](./test/ultrasonic_sensor.py)`
+
+## Folyadék-áramlásmérő használata
+
+Működő példakód: [flowmeter.py](./test/flowmeter.py)
+
+## Hőmérő használata
+
+Működő példakód: [thermometer.py](./test/thermometer.py)
 
 ## LCD használata
 A kijelző használata az I/O Expanderrel együtt nagyon kényelmes az [RPLCD package](https://rplcd.readthedocs.io/en/stable/) segítségével.
@@ -38,14 +50,6 @@ sudo i2cdetect -y 1
 
 Működő példakód: [lcd.py](./test/lcd.py)
 
-## Ultrahangos távolságmérő használata
+## Modbus használata
 
-Működő példakód: [ultrasonic_sensor.py](./test/ultrasonic_sensor.py)
-
-## Folyadék-áramlásmérő használata
-
-Működő példakód: [flowmeter.py](./test/flowmeter.py)
-
-## Hőmérő használata
-
-Működő példakód: [thermometer.py](./test/thermometer.py)
+Működő példakód: [modbus.py](./test/modbus.py)
