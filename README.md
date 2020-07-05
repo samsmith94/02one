@@ -17,15 +17,25 @@ A `-r` kapcsolót kell használni:
 `pscp -pw raspberry -r folder\* pi@raspberrypi:/home/pi/`.
 
 ## Ultrahangos távolságmérő használata
+A távolságmérő használatához semmilyen telepítendő függőség nem szükséges, csupán az alapértelmezetten telepített `RPi.GPIO` package.
 
-`Működő példakód: [ultrasonic_sensor.py](./test/ultrasonic_sensor.py)`
+Működő példakód: [ultrasonic_sensor.py](./test/ultrasonic_sensor.py)
 
 ## Folyadék-áramlásmérő használata
+A folyadék-áramlásmérő használatához semmilyen telepítendő függőség nem szükséges, csupán az alapértelmezetten telepített `RPi.GPIO` package.
 
 Működő példakód: [flowmeter.py](./test/flowmeter.py)
 
 ## Hőmérő használata
-
+A hőmérő használatához engedélyezni kell a 1-wire buszt, a következőképpen:
+```
+sudo raspi-config
+```
+Aztán `Interfacing Options` -> `1-Wire` -> `Igen` -> `Ok` -> `Finish`
+Végül érdemes reboot-olni:
+```
+sudo reboot
+```
 Működő példakód: [thermometer.py](./test/thermometer.py)
 
 ## LCD használata
@@ -48,8 +58,19 @@ Használata:
 sudo i2cdetect -y 1
 ```
 
+A kijelző használatához engedélyezni kell a I2C buszt, a következőképpen:
+```
+sudo raspi-config
+```
+Aztán `Interfacing Options` -> `I2C` -> `Igen` -> `Ok` -> `Finish`
+
 Működő példakód: [lcd.py](./test/lcd.py)
 
 ## Modbus használata
+A soros port használatához engedélyezni kell a UART-ot, a következőképpen:
+```
+sudo raspi-config
+```
+Aztán `Interfacing Options` -> `Serial` -> `Igen` -> `Ok` -> `Finish`
 
 Működő példakód: [modbus.py](./test/modbus.py)
